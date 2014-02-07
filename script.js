@@ -40,7 +40,7 @@ function updateWaypoints() {
 }
 
 function waypointClickHandler(e) {
-	console.log('cilck');
+	console.log('click');
 	for (i = 0; i < waypoints.length; i++) {
 		if (waypoints[i] === this) {
 			scrolled = (i+1)*100;
@@ -62,24 +62,3 @@ function MouseWheelHandler(e) {
 	updateWaypoints();
 }
 
-$(document).ready(function () {
-
-    animationHover('#intro-logo', 'tada')
-
-    function animationHover(waypoint, animation) {
-        element = $(waypoint);
-        element.hover(
-
-        function () {
-            element.addClass('animated ' + animation);
-        },
-
-        function () {
-            //wait for animation to finish before removing classes
-            window.setTimeout(function () {
-                element.removeClass('animated ' + animation);
-            }, 2000);
-        });
-    }
-
-});
