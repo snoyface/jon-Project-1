@@ -9,8 +9,15 @@ if (document.addEventListener) {
 }
 
 
+var waypoints = document.getElementsByClassName('waypoint');
+for (i = 0; i < waypoints.length; i++) {
+	// Here we attach a handler to the click event for every waypoint,
+	// https://developer.mozilla.org/en-US/docs/Web/Reference/Events/click
+	waypoints[i].addEventListener("click", waypointClickHandler, false);
+}
 
-
+function updateWaypoints() {
+	fractionScrolled = scrolled / scrollTotal;
 
 	// 0 <= fractionScrolled <= 1, so *10 gives us 10; Math.floor rounds down
 	var whichWaypoint = Math.max(0, Math.floor(fractionScrolled * 10) - 1);
