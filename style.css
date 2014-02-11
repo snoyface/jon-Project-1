@@ -154,3 +154,8 @@ li div {
 	margin-left: auto;	
 }
 
+nav ol li:hover {
+ 	background-color: green;
+ 	transition: 1500ms ease;
+ 	-webkit-transition: 1500ms ease
+ }
