@@ -47,6 +47,7 @@ function waypointClickHandler(e) {
 			updateWaypoints();
 			console.log(scrolled);
 		}
+	
 	}
 }
 
@@ -59,6 +60,22 @@ function MouseWheelHandler(e) {
 
 	document.getElementsByTagName('header')[0].innerHTML = scrolled;
 	
-	updateWaypoints();
-}
+	updateWaypoints();}
+
+//add functionality to next-triangle
+var next = document.getElementById('next-triangle');
+next.onclick = function() {
+	for (i = 0; i < waypoints.length; i++){
+		if (waypoints[i] ===this){
+     	scrolled = (i+1)*100;
+     	updateWaypoints();
+     	console.log(scrolled_down)
+		}
+	}
+	}
+
+
+
+
+
 
