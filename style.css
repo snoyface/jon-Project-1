@@ -34,7 +34,7 @@ header, footer {
 main {
 	min-width: 960px;
 	height: calc(100% - 2*64px);
-	background-color: gray;
+	background-color: black;
 }
 
 #content {
