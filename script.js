@@ -1,7 +1,8 @@
 var scrollTotal = 1000;
 var scrolled = 0; // A variable to keep track of how far we've scrolled.
 var fractionScrolled = scrolled / scrollTotal;
-
+var triangle = document.getElementById('next-triangle');
+triangle.addEventListener("click", triangleClickHandler, false);
 
 // You can read more about the mosuewheel event at https://developer.mozilla.org/en-US/docs/DOM/DOM_event_reference/mousewheel
 if (document.addEventListener) {
@@ -61,19 +62,18 @@ function MouseWheelHandler(e) {
 	document.getElementsByTagName('header')[0].innerHTML = scrolled;
 	
 	updateWaypoints();}
+	
 
-//add functionality to next-triangle
-var next = document.getElementById('next-triangle');
-next.onclick = function() {
-	for (i = 0; i < waypoints.length; i++){
-		if (waypoints[i] ===this){
-     	scrolled = (i+1)*100;
-     	updateWaypoints();
-     	console.log(scrolled_down)
+function triangleClickHandler(e) {
+ 	console.log('Tclick');
+ 	
+ 		if (triangle === this) {
+ 			scrolled = scrolled+100;
+ 			if (scrolled>1000){scrolled=0;}
+ 			updateWaypoints();
+ 			console.log(scrolled);
 		}
-	}
-	}
-
+}
 
 
 
