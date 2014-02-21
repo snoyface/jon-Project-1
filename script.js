@@ -1,10 +1,11 @@
 var scrollTotal = 1000;
 var scrolled = 0; // A variable to keep track of how far we've scrolled.
 var fractionScrolled = scrolled / scrollTotal;
+
 var triangle = document.getElementById('next-triangle');
 triangle.addEventListener("click", triangleClickHandler, false);
 
-// You can read more about the mosuewheel event at https://developer.mozilla.org/en-US/docs/DOM/DOM_event_reference/mousewheel
+// You can read more about the mousewheel event at https://developer.mozilla.org/en-US/docs/DOM/DOM_event_reference/mousewheel
 if (document.addEventListener) {
 	document.addEventListener("mousewheel", MouseWheelHandler, false);
 }
@@ -38,6 +39,11 @@ function updateWaypoints() {
 
 	// Seek to the proportional time of the 38s clip of Bey's "Countdown"
 	document.getElementById('Countdown').currentTime = fractionScrolled * 20.0;
+	
+	if (scrolled<250){
+		console.log("1st");
+		document.getElementById('first').setAttribute('style','img: ./mask_spin00991.psd');
+	}
 }
 
 function waypointClickHandler(e) {
@@ -60,6 +66,16 @@ function MouseWheelHandler(e) {
 	scrolled = Math.min(Math.max(0, scrolled - rawScrolled), scrollTotal);
 
 	document.getElementsByTagName('header')[0].innerHTML = scrolled;
+	if (scrolled>100){
+ 				document.getElementById('show1').setAttribute('style','background-image: img(./2.tif);');
+ 				document.getElementById('show1').setAttribute('style','color: black;');
+ 			}
+ 			
+ 			if (scrolled>300){
+ 				document.getElementById('show1').setAttribute('style','visibility:hidden;');
+ 				document.getElementById('show2').setAttribute('style','background-image: img(./2.tif);');
+ 				
+ 			}
 	
 	updateWaypoints();}
 	
@@ -69,12 +85,19 @@ function triangleClickHandler(e) {
  	
  		if (triangle === this) {
  			scrolled = scrolled+100;
- 			if (scrolled>1000){scrolled=0;}
+ 			if (scrolled>100){
+ 				document.getElementById('first').setAttribute('style','background-image: ./2.tif)');
+ 				document.getElementById('first').setAttribute('style','color: black;');
+ 			}
+ 			
+ 			if (scrolled>300){
+ 				document.getElementById('first').setAttribute('style','visibility:hidden;');
+ 				document.getElementById('second').setAttribute('style','background-image: ./2.tif)');
+ 				
+ 			}
  			updateWaypoints();
  			console.log(scrolled);
 		}
 }
-
-
 
 

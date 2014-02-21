@@ -159,3 +159,23 @@ nav ol li:hover {
  	transition: 1500ms ease;
  	-webkit-transition: 1500ms ease
  }
+ 
+ 
+#first{
+ +	background-color: white;
+ +	color: white;
+ +	font-size: 200%;
+ +	background-size: cover;
+ +}
+ #second{
+ +	background-color: white;
+ +	background-size: cover;
+ +}
+ #third{
+ +	background-color: white;
+ +	background-size: cover;
+ +}
+ #fourth{
+ 	background-color: white;
+ 	background-size: cover;
+ }
