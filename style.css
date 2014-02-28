@@ -97,20 +97,22 @@ aside {
 
 .right {
 	right: calc(50% - 320px / 2 - 128px * 1.5);
-	background-color: #555;
+	background-color: #000;
 }
 
 .left {
 	left: calc(50% - 320px / 2 - 128px * 1.5);
-	background-color: #CCC;
+	background-color: #000;
 }
 
 .top {
 	top: 7.525%; /*(100 - 23.3*3)/4%*/
+	background-color: #000;
 }
 
 .bottom {
 	top: calc(7.525% * 2 + 23.3%);
+	background-color: #000;
 }
 
 /* NAVBAR */
