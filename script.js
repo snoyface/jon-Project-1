@@ -59,6 +59,9 @@ function waypointClickHandler(e) {
 }
 
 
+
+
+
 function MouseWheelHandler(e) {
 	// This function is called every time there's a mousewheelevent
 
@@ -67,13 +70,13 @@ function MouseWheelHandler(e) {
 
 	document.getElementsByTagName('header')[0].innerHTML = scrolled;
 	if (scrolled>100){
- 				document.getElementById('show1').setAttribute('style','background-image: img(./2.tif);');
- 				document.getElementById('show1').setAttribute('style','color: black;');
+ 				document.getElementById('first').setAttribute('style', 'left: 50px', 'show_image(./2.tif)');
+ 				//document.getElementById('first').setAttribute('style','color: black;');
  			}
  			
  			if (scrolled>300){
- 				document.getElementById('show1').setAttribute('style','visibility:hidden;');
- 				document.getElementById('show2').setAttribute('style','background-image: img(./2.tif);');
+ 				document.getElementById('first').setAttribute('style','visibility:hidden;');
+ 				document.getElementById('second').setAttribute('style', 'left: 50px','background-image: img(./2.tif)');
  				
  			}
 	
@@ -86,7 +89,7 @@ function triangleClickHandler(e) {
  		if (triangle === this) {
  			scrolled = scrolled+100;
  			if (scrolled>100){
- 				document.getElementById('first').setAttribute('style','background-image: ./2.tif)');
+ 				document.getElementById('first').setAttribute('style','background-image: )');
  				document.getElementById('first').setAttribute('style','color: black;');
  			}
  			
@@ -100,4 +103,9 @@ function triangleClickHandler(e) {
 		}
 }
 
+function scrolltransition(e) {
+	if (scrolled < 250) {
 
+	};
+
+}

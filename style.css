@@ -128,19 +128,21 @@ nav ol {
 	margin: 0;
 	list-style-type: none;
 	height: 100%;
-	width: 100%;
+	width: 100%;;
 }
 
 nav ol li {
 	width: 100%;
 	height: 10%;
 	background-color: black;
-	padding: 0;
+	padding: 5px;
 	margin: 0;
+	-webkit-transition: padding 6px;
 }
 
 .active-waypoint {
 	background-color: #D12121;
+	-webkit-transition: 1500ms ease-in;
 }
 
 li div {
@@ -158,26 +160,32 @@ li div {
 
 nav ol li:hover {
  	background-color: green;
+ 	padding: 10px;
  	transition: 1500ms ease;
- 	-webkit-transition: 1500ms ease
+    -webkit-transition: 1500ms ease;
+
+
  }
  
  
 #first{
- +	background-color: white;
- +	color: white;
- +	font-size: 200%;
- +	background-size: cover;
- +}
- #second{
- +	background-color: white;
- +	background-size: cover;
- +}
- #third{
- +	background-color: white;
- +	background-size: cover;
- +}
- #fourth{
- 	background-color: white;
+ 	background-color: #000;
+ 	font-size: 200%;
  	background-size: cover;
+ 	left: -50px;
+ }
+ #second{
+ 	background-color: #000;
+ 	background-size: cover;
+ 	left: -50px;
+ }
+ #third{
+ 	background-color: #000;
+ 	background-size: cover;
+ 	right: 50px;
+ }
+ #fourth{
+ 	background-color: #000;
+ 	background-size: cover;
+ 	right: 50px;
  }
